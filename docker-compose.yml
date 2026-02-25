@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    container_name: web_cgi
+    build:
+      context: .
+
+    volumes:
+      - ./log/web:/var/log/nginx/web
+    ports:
+      - "8080:80"
